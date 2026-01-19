@@ -51,13 +51,19 @@ Si el servidor se llama server1 y está en el dominio google.com:
     al servidor físico "L" que esté topológicamente más cerca de ti. Esto proporciona alta disponibilidad y resistencia a ataques DDoS.
 ### 4¿Qué es un archivo de zona (zone file)? Indica para qué sirven los registros de un archivo de zona. Pon un ejemplo de un archivo de zona e interpreta la información almacenada
 
-    
   Un archivo de zona es un archivo de texto simple que describe una zona DNS completa. 
   Contiene las instrucciones (Resource Records) que le dicen al servidor cómo resolver los nombres dentro de        ese dominio.
-
-    
+  
   Para que sirven principalmente:
-    | Registro | Nombre completo | Función |
-    | :--- | :--- | :--- |
-    | SOA | Start of Authority | **Obligatorio** Define paramentros globales de la zona (servidor primario, email del admin, números de serie y tiempos de caché |
+
+  | Registro | Nombre Completo | Función |
+| :--- | :--- | :--- |
+| **SOA** | Start of Authority | **Obligatorio**. Define parámetros globales de la zona (servidor primario, email, caché). |
+| **NS** | Name Server | Indica qué servidores DNS tienen la autoridad sobre esta zona. |
+| **A** | Address | Traduce un nombre de host a una dirección **IPv4**. |
+| **AAAA** | Quad A | Traduce un nombre de host a una dirección **IPv6**. |
+| **CNAME** | Canonical Name | Crea un alias de un nombre a otro (ej. `www` apunta al dominio raíz). |
+| **MX** | Mail Exchange | Indica los servidores encargados de recibir el correo electrónico. |
+| **TXT** | Text | Guarda texto arbitrario, usado para verificaciones de seguridad (SPF, DKIM). |
+   
     
