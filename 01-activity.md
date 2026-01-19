@@ -75,28 +75,28 @@ al servidor físico "L" que esté topológicamente más cerca de ti. Esto propor
 
 Ejemplo e interpretación:
 
-$ORIGIN example.com.
-$TTL 86400
-
-; --- REGISTRO SOA (Inicio de Autoridad) ---
-@   IN  SOA     ns1.example.com. admin.example.com. (
-            2026011901 ; Serial (Formato AAAAMMDDnn)
-            3600       ; Refresh (1 hora)
-            1800       ; Retry (30 min)
-            604800     ; Expire (1 semana)
-            86400 )    ; Minimum TTL (1 día)
-
-; --- SERVIDORES DE NOMBRES (NS) ---
-    IN  NS      ns1.example.com.
-    IN  NS      ns2.example.com.
-
-; --- REGISTROS DE DIRECCIÓN (A / AAAA) ---
-@   IN  A       192.0.2.10      ; La raíz (example.com) apunta a esta IP
-ns1 IN  A       192.0.2.10      ; El servidor de nombres ns1 es esta misma máquina
-www IN  CNAME   example.com.    ; www es un alias de la raíz
-
-; --- CORREO (MX) ---
-@   IN  MX  10  mail.example.com. ; Servidor de correo con prioridad 10
-mail IN A       192.0.2.20        ; IP del servidor de correo
+    $ORIGIN example.com.
+    $TTL 86400
+    
+    ; --- REGISTRO SOA (Inicio de Autoridad) ---
+    @   IN  SOA     ns1.example.com. admin.example.com. (
+                2026011901 ; Serial (Formato AAAAMMDDnn)
+                3600       ; Refresh (1 hora)
+                1800       ; Retry (30 min)
+                604800     ; Expire (1 semana)
+                86400 )    ; Minimum TTL (1 día)
+    
+    ; --- SERVIDORES DE NOMBRES (NS) ---
+        IN  NS      ns1.example.com.
+        IN  NS      ns2.example.com.
+    
+    ; --- REGISTROS DE DIRECCIÓN (A / AAAA) ---
+    @   IN  A       192.0.2.10      ; La raíz (example.com) apunta a esta IP
+    ns1 IN  A       192.0.2.10      ; El servidor de nombres ns1 es esta misma máquina
+    www IN  CNAME   example.com.    ; www es un alias de la raíz
+    
+    ; --- CORREO (MX) ---
+    @   IN  MX  10  mail.example.com. ; Servidor de correo con prioridad 10
+    mail IN A       192.0.2.20        ; IP del servidor de correo
    
     
