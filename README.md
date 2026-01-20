@@ -8,6 +8,7 @@
 ![WordPress](https://img.shields.io/badge/WordPress-%23117AC9.svg?style=for-the-badge&logo=WordPress&logoColor=white)
 
 </div>
+
 # Despliegue de Infraestructura LAMP Escalable en AWS para WordPress
 
 Este repositorio documenta el despliegue manual de una arquitectura web de tres capas (Compute, Database, Storage) utilizando servicios de Amazon Web Services (AWS) y software de código abierto.
