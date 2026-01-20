@@ -15,4 +15,4 @@ En esta carpeta se enceuntran las actividades resueltas sobre el servidor web [A
 
 ## Proyecto 2º Trimestre | AWS
 
-- Loading... [Wordpress en AWS](https://github.com/1dd0Rv/SREI/tree/wdpss_aws)
+- ✅ [Wordpress en AWS](https://github.com/1dd0Rv/SREI/tree/wdpss_aws)
