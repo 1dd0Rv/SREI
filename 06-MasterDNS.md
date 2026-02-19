@@ -2,6 +2,10 @@
 
 <img width="523" height="296" alt="image" src="https://github.com/user-attachments/assets/d1014f65-6814-4855-8cc7-5bbb577f88b5" />
 
+Editamos el named.conf del dns master.
+
+<img width="755" height="172" alt="image" src="https://github.com/user-attachments/assets/211f4d20-52c1-48a1-bfa1-a99a7cf30344" />
+
 Una vez instalado bind9 y sus utilidades vamos a crear el archivo de configuración de Zona Directa.
 
 <img width="665" height="317" alt="image" src="https://github.com/user-attachments/assets/a4b995f9-25a9-4796-85ad-3c3218fa8cac" />
