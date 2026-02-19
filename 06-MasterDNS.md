@@ -16,8 +16,7 @@ Vamos a comprobar que nuestros ficheros tienen la sintaxis correcta
 
 Restablecemos el servicio named
 
-<img width="696" height="225" alt="image" src="https://github.com/user-attachments/assets/61eff7bd-1d32-4403-a752-
-7cb5b7ec3955" />
+<img width="696" height="225" alt="image" src="https://github.com/user-attachments/assets/61eff7bd-1d32-4403-a752-7cb5b7ec3955" />
 
 
 
