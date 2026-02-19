@@ -18,6 +18,30 @@ Restablecemos el servicio named
 
 <img width="696" height="225" alt="image" src="https://github.com/user-attachments/assets/61eff7bd-1d32-4403-a752-7cb5b7ec3955" />
 
+En el resolv.conf de nuestro segundo server ponemos nuestro servidor principal.
+
+<img width="629" height="185" alt="image" src="https://github.com/user-attachments/assets/eb8f715f-cf8d-4a36-b385-dabcdcc77e00" />
+
+Y empezamos a pribar los registros
+
+- SOA
+
+<img width="833" height="317" alt="image" src="https://github.com/user-attachments/assets/bd618f19-b7e1-4e61-b977-3447bb4a5c17" />
+
+- NS
+
+<img width="603" height="334" alt="image" src="https://github.com/user-attachments/assets/1f84e4c9-9d85-4429-837f-b37be31da499" />
+
+- MX
+
+<img width="609" height="384" alt="image" src="https://github.com/user-attachments/assets/4ba6a59e-79ab-4f36-a4f8-efc209312dc3" />
+
+- INVERSA
+
+<img width="521" height="238" alt="image" src="https://github.com/user-attachments/assets/37ab343a-7f14-4113-9dea-d718d407af76" />
+
+
+
 
 
 
