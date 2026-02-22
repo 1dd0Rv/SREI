@@ -28,8 +28,8 @@ services:
     image: php:8.2-apache
     container_name: web_marisma
     ports:
-      - "80:80"
-      - "443:443"
+      - "8080:80"
+      - "8443:443"
     volumes:
       - ./web:/var/www/html # Volumen para el alojamiento web
     networks:
@@ -44,7 +44,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root_password_segura
     ports:
-      - "3306:3306"
+      - "3307:3306"
     volumes:
       - ./mysql:/var/lib/mysql # Volumen para las bases de datos
     networks:
