@@ -1,8 +1,10 @@
-El primer paso es instalar docker y asi tenemos nuestras configuraciones y todo corriendo sobre docker. Creaamos 
-un directorio donde guardaremos nuestro docker compose 
+## Crear docker compose para levantar el servicio DNS.
+
+- El primer paso es instalar docker y asi tenemos nuestras configuraciones y todo corriendo sobre docker.
+  Creaamos un directorio donde guardaremos nuestro docker compose 
 <img width="600" height="74" alt="image" src="https://github.com/user-attachments/assets/a560d6eb-3b72-4b6e-9259-5967aafb0dad" />
 
-Dentro del directorio **alojamiento_docker** crearemos un docker compose que definira los contenedores, la red interna y los volumenes.
+- Dentro del directorio **alojamiento_docker** crearemos un docker compose que definira los contenedores, la red    interna y los volumenes.
 ``` YML
 version: '3.8'
 
@@ -60,4 +62,28 @@ networks:
 ``` 
 <img width="826" height="187" alt="image" src="https://github.com/user-attachments/assets/dec4ab27-2f14-4ca4-b450-ad78e8f74a19" />
 
+Creamos un script para la puesta en marcha de los contenedores:
+
+```Bash
+#!/bin/bash
+# iniciar_docker.sh - Script para levantar la infraestructura Docker
+
+echo "[+] Iniciando despliegue de contenedores (DNS, Web, MySQL)..."
+
+# Comprobamos si docker-compose está instalado
+if ! command -v docker-compose &> /dev/null; then
+    echo "[!] Error: docker-compose no está instalado. Instalando..."
+    sudo apt-get update && sudo apt-get install -y docker-compose
+fi
+
+# Damos permisos a las carpetas de volúmenes por si acaso
+chmod -R 755 /opt/alojamiento_docker/web
+
+# Levantamos los contenedores en segundo plano (-d)
+docker-compose up -d
+
+echo "[+] ¡Contenedores desplegados correctamente!"
+echo "[+] Estado actual:"
+docker ps
+```
 
