@@ -7,7 +7,9 @@ mkdir -p ~/marisma/{dns,web,scripts,volumes/{bind,www,ftp-certs,logs}}
 La idea es que todo el proyecto viva en ~/marisma y los datos en volumes/
 
 <img width="859" height="333" alt="image" src="https://github.com/user-attachments/assets/1a68a104-3651-4dcb-ad89-53246e6520e9" />
-```
+
+
+``` Bash
 ~/marisma/
 ├── docker-compose.yml
 ├── dns/
