@@ -2,7 +2,7 @@
 
 Para la configuracion del DNS tenemos que crear los archivos correspondientes con zona directa e inversa.
 
-## Zona directa e inversa.
+## Zona directa e inversa - named.conf.local
 
 ```Bash
 // Zona directa
@@ -19,7 +19,7 @@ zone "0.20.172.in-addr.arpa" {
     allow-update { none; };
 };
 ```
-## fsd
+## named.conf.options
 
 ```Bash
 options {
@@ -47,7 +47,7 @@ options {
         172.20.0.0/24;
     };
 ```
-## Configuracion de servidores directa
+## Configuracion de servidores directa - db.marisma.local
 
 ``` Bash
 ; Zona directa: marisma.local
@@ -71,7 +71,7 @@ db      IN  A       172.20.0.20
 ; Los subdominios de clientes se añaden dinámicamente con el script
 ```
 
-## Configruacion servidores inversa
+## Configruacion servidores inversa - db.172.20
 
 ``` Bash
   GNU nano 8.7.1                                     db.172.20                                                  
