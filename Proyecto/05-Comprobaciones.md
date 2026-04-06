@@ -18,7 +18,7 @@ docker exec marisma-web /usr/local/bin/marisma/crear_cliente.sh -u pepito -i 172
   ```
   <img width="1045" height="218" alt="image" src="https://github.com/user-attachments/assets/34d69872-2a5e-4b8d-bff0-3acd702f99d9" />
 
-  - Comprobacion de que la base de datos existe.
+- Comprobacion de que la base de datos existe.
     ``` Bash
     docker exec marisma-db mariadb -u root -prootpass123 -e "SHOW DATABASES;" | grep pepito
     ```
