@@ -12,7 +12,8 @@ Debemos ver los dos contenedores corriendo:
 - `marisma-web` → Contenedor principal con todos los servicios
 - `marisma-db` → MariaDB
 
-<!-- CAPTURA: docker ps -->
+<img width="1433" height="195" alt="image" src="https://github.com/user-attachments/assets/043ceb79-d985-417c-b77d-fd3a303f5855" />
+
 
 ### 2. Estado de los servicios internos
 
@@ -26,39 +27,43 @@ Los 4 servicios deben estar en RUNNING:
 - proftpd
 - sshd
 
-<!-- CAPTURA: docker logs con los 4 servicios RUNNING -->
+<img width="1009" height="194" alt="image" src="https://github.com/user-attachments/assets/10b8e259-03c8-4db3-b27d-d95cb4f5ab13" />
+
 
 ### 3. Creación de cliente de prueba
 
 ```Bash
-docker exec marisma-web /usr/local/bin/marisma/crear_cliente.sh -u pepito -i 172.20.0.10 -p Test1234
+docker exec marisma-web /usr/local/bin/marisma/crear_cliente.sh -u Juan -i 172.20.0.10 -p Test1234
 ```
 
-<!-- CAPTURA: Salida del script con los 7 pasos -->
+<img width="1019" height="586" alt="image" src="https://github.com/user-attachments/assets/3ca0645c-ead5-4387-b417-489445d8417a" />
+
 
 ### 4. Verificación DNS
 
 Comprobamos que el subdominio resuelve correctamente:
 
 ```Bash
-docker exec marisma-web dig pepito.marisma.local @127.0.0.1
+docker exec marisma-web dig juan.marisma.local @127.0.0.1
 ```
 
-Resultado esperado: `pepito.marisma.local.  86400  IN  A  172.20.0.10`
+Resultado esperado: `juan.marisma.local.  86400  IN  A  172.20.0.10`
 
-<!-- CAPTURA: dig -->
+<img width="763" height="388" alt="image" src="https://github.com/user-attachments/assets/3ca85f53-8818-4125-9cd7-defcd103c4bc" />
+
 
 ### 5. Verificación Web (Apache + PHP)
 
 Comprobamos que Apache sirve la página del cliente:
 
 ```Bash
-docker exec marisma-web curl -s -H "Host: pepito.marisma.local" http://127.0.0.1 | head -5
+docker exec marisma-web curl -s -H "Host: juan.marisma.local" http://127.0.0.1 | head -5
 ```
 
 Debe mostrar el HTML de la página de bienvenida.
 
-<!-- CAPTURA: curl -->
+<img width="985" height="164" alt="image" src="https://github.com/user-attachments/assets/6090855f-1e30-4415-bae0-a4e347d240b4" />
+
 
 ### 6. Verificación Base de Datos
 
@@ -68,24 +73,26 @@ Comprobamos que la base de datos y el usuario fueron creados:
 docker exec marisma-db mariadb -u root -prootpass123 -e "SHOW DATABASES;" | grep pepito
 ```
 
-Debe mostrar `pepito_db`.
+Debe mostrar `juan_db`.
 
-<!-- CAPTURA: SHOW DATABASES -->
+<img width="929" height="90" alt="image" src="https://github.com/user-attachments/assets/2af1269f-fbb6-48d0-9f79-bfd87b55a6c2" />
+
 
 ### 7. Verificación SSH
 
 Desde una máquina cliente nos conectamos por SSH:
 
 ```Bash
-ssh pepito@192.168.206.172 -p 2222
+ssh juan@192.168.206.172 -p 2222
 ```
 
-<!-- CAPTURA: conexión SSH exitosa -->
+<img width="878" height="327" alt="image" src="https://github.com/user-attachments/assets/2f640ceb-ba2d-436a-a90a-e54f5e92ebfb" />
+
 
 ### 8. Verificación SFTP
 
 ```Bash
-sftp -P 2222 pepito@192.168.206.172
+sftp -P 2222 juan@192.168.206.172
 ```
 
 Una vez dentro podemos listar archivos con `ls`:
