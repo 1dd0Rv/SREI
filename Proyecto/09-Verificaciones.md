@@ -102,7 +102,8 @@ sftp> ls
 app.py     index.html   info.php
 ```
 
-<!-- CAPTURA: conexión SFTP -->
+<img width="563" height="224" alt="image" src="https://github.com/user-attachments/assets/a89449b6-af09-4794-b0c9-ee0494afdd00" />
+
 
 ### 9. Verificación FTP con TLS
 
@@ -112,7 +113,7 @@ Desde un cliente con `lftp`:
 lftp
 set ftp:ssl-allow true
 set ssl:verify-certificate no
-open -u pepito,Test1234 ftp://192.168.206.172
+open -u juan,Test1234 ftp://192.168.206.172
 ls
 ```
 
@@ -122,7 +123,8 @@ También se puede verificar que el servidor ofrece TLS con `openssl`:
 openssl s_client -connect 192.168.206.172:21 -starttls ftp
 ```
 
-<!-- CAPTURA: openssl mostrando CONNECTED -->
+<img width="965" height="317" alt="image" src="https://github.com/user-attachments/assets/85718876-220a-4011-9f7e-c5c51d89d02d" />
+
 
 ### 10. Verificación phpMyAdmin
 
@@ -132,6 +134,7 @@ Accedemos desde el navegador a:
 http://192.168.206.172:8080
 ```
 
-Iniciamos sesión con el usuario `pepito_usr` y la contraseña del cliente para acceder a la base de datos `pepito_db`.
+Iniciamos sesión con el usuario `juan_usr` y la contraseña del cliente para acceder a la base de datos `pepito_db`.
 
-<!-- CAPTURA: phpMyAdmin en el navegador -->
+<img width="1067" height="765" alt="image" src="https://github.com/user-attachments/assets/9b2933d9-0e38-4996-a1bd-307d33afa869" />
+
