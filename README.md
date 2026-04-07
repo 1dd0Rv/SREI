@@ -22,4 +22,4 @@ Actividades y proyectos [DNS](https://github.com/1dd0Rv/SREI/tree/dns)
 - ✅ [Wordpress en AWS](https://github.com/1dd0Rv/SREI/tree/wdpss_aws)
 
 ## Proyecto DNS
-- Loading... [Servidor Alojamiento Web](https://github.com/1dd0Rv/SREI/tree/dns/Proyecto)
+- ✅ [Servidor Alojamiento Web](https://github.com/1dd0Rv/SREI/tree/dns/Proyecto)
