@@ -23,6 +23,19 @@ docker exec marisma-web /usr/local/bin/marisma/crear_cliente.sh -u pepito -i 172
     docker exec marisma-db mariadb -u root -prootpass123 -e "SHOW DATABASES;" | grep pepito
     ```
     <img width="977" height="128" alt="image" src="https://github.com/user-attachments/assets/43a2b48f-b28e-484c-8e2e-84821457d235" />
+--- 
+
+## SSH y SFTP
+
+Desde otra maquina virtual que este en la misma red de nuestro LXC entraremos por SSH para comprobar que funciona este apartado. 
+
+<img width="961" height="339" alt="image" src="https://github.com/user-attachments/assets/d1655b53-5685-4527-9849-d5f074a21038" />
+
+Para probar **SFTP** ejecutamos el siguiente comando.
+
+<img width="968" height="255" alt="image" src="https://github.com/user-attachments/assets/7f80873f-43d3-4655-bf12-bc61fd1a5676" />
+
+
 
 
   
