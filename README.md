@@ -15,7 +15,7 @@ En esta carpeta se enceuntran las actividades resueltas sobre el servidor web [A
 
 ## Activiades 2º Trimestre
 
-Actividades y proyectos [DNS](https://github.com/1dd0Rv/SREI/tree/dns) 
+Actividades y proyectos [DNS](https://github.com/1dd0Rv/SREI/tree/dns/Actividades) 
 
 ## Proyecto 2º Trimestre | AWS
 
