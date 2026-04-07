@@ -2,7 +2,6 @@
 
 **docker-compose.yml**
 ```YAMAL
-version: "3.9"
 
 networks:
   marisma-net:
