@@ -15,11 +15,11 @@ En esta carpeta se enceuntran las actividades resueltas sobre el servidor web [A
 
 ## Activiades 2º Trimestre
 
-Actividades y proyectos [DNS](https://github.com/1dd0Rv/SREI/tree/dns/Actividades) 
+Actividades [DNS](https://github.com/1dd0Rv/SREI/tree/dns/Actividades) 
+
+## Proyecto DNS
+- ✅ [Servidor Alojamiento Web](https://github.com/1dd0Rv/SREI/tree/dns/Proyecto)
 
 ## Proyecto AWS
 
 - ✅ [Wordpress en AWS](https://github.com/1dd0Rv/SREI/tree/wdpss_aws)
-
-## Proyecto DNS
-- ✅ [Servidor Alojamiento Web](https://github.com/1dd0Rv/SREI/tree/dns/Proyecto)
