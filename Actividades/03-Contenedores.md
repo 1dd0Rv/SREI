@@ -88,7 +88,7 @@ Al instalar Docker se crean tres redes predefinidas:
 docker network ls
 ```
 
-> **Captura:** salida de `docker network ls` mostrando las redes `bridge`, `host` y `none`
+<img width="640" height="226" alt="image" src="https://github.com/user-attachments/assets/5dbd600e-34f6-4c1b-a086-3642bcdde42f" />
 
 ### 2.1 Red bridge (por defecto)
 
@@ -104,7 +104,7 @@ En otra terminal:
 docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' contenedor1
 ```
 
-> **Captura:** IP asignada al contenedor dentro del rango `172.17.0.0/16`
+<img width="1899" height="235" alt="image" src="https://github.com/user-attachments/assets/b47be8bc-3b0f-4b8c-b0db-cc28df174d15" />
 
 Verificamos el bridge `docker0` en el host:
 
@@ -112,7 +112,7 @@ Verificamos el bridge `docker0` en el host:
 ip a
 ```
 
-> **Captura:** salida de `ip a` mostrando la interfaz `docker0` con dirección `172.17.0.1`
+<img width="1441" height="208" alt="image" src="https://github.com/user-attachments/assets/28d1751b-1fbe-43c6-91fb-71265a79078e" />
 
 ### 2.2 Red host
 
@@ -124,11 +124,11 @@ docker run -d --name mi_servidor --network host josedom24/aplicacionweb:v1
 docker ps
 ```
 
-> **Captura:** salida de `docker ps` sin columna PORTS (el servicio se expone directamente en el host)
+<img width="1890" height="565" alt="image" src="https://github.com/user-attachments/assets/b0a547b2-7d7c-4f4a-b502-5f06fdfdff9e" />
 
 Acceder al puerto 80 del servidor directamente desde el navegador para verificar la página web.
 
-> **Captura:** navegador mostrando la página web servida por el contenedor en red host
+<img width="1755" height="426" alt="image" src="https://github.com/user-attachments/assets/f1f61774-0e51-4d88-bfb6-61db8ea177e6" />
 
 ### 2.3 Redes definidas por el usuario
 
@@ -141,7 +141,7 @@ docker network create red1
 docker network inspect red1
 ```
 
-> **Captura:** salida de `docker network inspect red1` mostrando la subred y el gateway asignados automáticamente
+<img width="1005" height="984" alt="image" src="https://github.com/user-attachments/assets/855cc053-1e0c-409b-bc97-37e7c074b871" />
 
 Lanzamos dos contenedores en esa red:
 
