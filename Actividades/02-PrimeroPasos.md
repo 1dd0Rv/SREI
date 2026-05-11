@@ -16,7 +16,8 @@ El comando `docker container run` descarga la imagen si no existe localmente y l
 docker container run hello-world
 ```
 
-> **Captura:** salida completa del comando `hello-world` mostrando el mensaje de Docker
+<img width="1093" height="714" alt="image" src="https://github.com/user-attachments/assets/dff5429f-b062-4ac8-9623-f986ce588abd" />
+
 
 ### 1.2 Descargar una imagen
 
@@ -26,7 +27,7 @@ Podemos descargar imágenes sin ejecutarlas con `docker image pull`:
 docker image pull alpine
 ```
 
-> **Captura:** salida del pull mostrando las capas descargadas de alpine
+<img width="1122" height="397" alt="image" src="https://github.com/user-attachments/assets/32e4aeb0-f352-4a4b-8388-ed8fe4ae32a8" />
 
 ### 1.3 Ejecutar comandos dentro de un contenedor
 
@@ -40,7 +41,7 @@ docker container run alpine ls -l
 docker container run alpine echo "hello from alpine"
 ```
 
-> **Captura:** salida de ambos comandos ejecutados en el contenedor alpine
+<img width="1212" height="736" alt="image" src="https://github.com/user-attachments/assets/b1d14d9e-0831-4494-9358-a7ab66bab978" />
 
 ### 1.4 Aislamiento de contenedores
 
@@ -50,7 +51,7 @@ Cada ejecución de `docker container run` crea un contenedor nuevo e independien
 docker container run alpine /bin/sh
 ```
 
-> **Captura:** muestra que el contenedor se inicia y termina sin interacción (sin flag `-it`)
+<img width="1129" height="436" alt="image" src="https://github.com/user-attachments/assets/db90a28e-1d05-4504-bda7-828902615609" />
 
 ### 1.5 Listar contenedores
 
@@ -66,7 +67,7 @@ Todos los contenedores, incluidos los detenidos:
 docker container ls -a
 ```
 
-> **Captura:** salida de `docker container ls -a` mostrando los contenedores creados en los pasos anteriores con estado `Exited`
+<img width="1918" height="444" alt="image" src="https://github.com/user-attachments/assets/6d75f9b6-0391-4b51-80ce-644397f7e935" />
 
 ### 1.6 Modo interactivo
 
@@ -84,7 +85,7 @@ uname -a
 exit
 ```
 
-> **Captura:** sesión interactiva dentro del contenedor alpine mostrando los comandos ejecutados
+<img width="1479" height="352" alt="image" src="https://github.com/user-attachments/assets/06fb35bb-75a1-4de7-b79b-0c1996cec874" />
 
 ---
 
@@ -100,7 +101,7 @@ El comando `docker image inspect` devuelve los metadatos completos de una imagen
 docker image inspect alpine
 ```
 
-> **Captura:** fragmento de la salida JSON con campos como `Architecture`, `Os` y `RootFS`
+<img width="1315" height="973" alt="image" src="https://github.com/user-attachments/assets/9b296a37-c318-4e81-9b8d-3050e322f77f" />
 
 ### 2.2 Crear una imagen desde un contenedor
 
@@ -120,7 +121,10 @@ figlet "hello docker"
 exit
 ```
 
-> **Captura:** salida de `figlet "hello docker"` dentro del contenedor Ubuntu
+<img width="1098" height="363" alt="image" src="https://github.com/user-attachments/assets/ea03436a-c6bf-4ec6-b592-f9e35b4d2b2d" />
+
+<img width="730" height="321" alt="image" src="https://github.com/user-attachments/assets/d1419845-da24-43c5-8cd1-dd10d3da2821" />
+
 
 Obtenemos el ID del contenedor que acabamos de usar:
 
@@ -146,7 +150,7 @@ Verificamos que la imagen aparece en el listado:
 docker image ls
 ```
 
-> **Captura:** salida de `docker image ls` mostrando la imagen `ourfiglet` creada
+<img width="1582" height="819" alt="image" src="https://github.com/user-attachments/assets/efd44ee4-b44d-4bd9-bb7a-5dd1afaa54f8" />
 
 Ejecutamos un contenedor con la nueva imagen:
 
@@ -154,7 +158,7 @@ Ejecutamos un contenedor con la nueva imagen:
 docker container run ourfiglet figlet hello
 ```
 
-> **Captura:** salida del comando `figlet hello` usando la imagen personalizada `ourfiglet`
+<img width="816" height="339" alt="image" src="https://github.com/user-attachments/assets/847d6154-5c6a-458a-b130-758861b52dc0" />
 
 ### 2.3 Crear una imagen con Dockerfile
 
@@ -186,7 +190,7 @@ CMD ["node","index.js"]
 EOF
 ```
 
-> **Captura:** contenido del directorio con `ls -l` mostrando `index.js` y `Dockerfile`
+<img width="736" height="645" alt="image" src="https://github.com/user-attachments/assets/7ac6c9b7-8d47-4b95-bbdf-7a61dd837ec5" />
 
 Construimos la imagen:
 
@@ -194,7 +198,7 @@ Construimos la imagen:
 docker image build -t hello:v0.1 .
 ```
 
-> **Captura:** salida completa del build mostrando cada paso (`Step 1/5`, `Step 2/5`, etc.)
+<img width="871" height="954" alt="image" src="https://github.com/user-attachments/assets/56c21fb1-53b3-431d-93ed-0e9464f77a4d" />
 
 Ejecutamos un contenedor con la imagen creada:
 
@@ -202,7 +206,7 @@ Ejecutamos un contenedor con la imagen creada:
 docker container run hello:v0.1
 ```
 
-> **Captura:** salida mostrando `hello from <container_id>`
+<img width="670" height="199" alt="image" src="https://github.com/user-attachments/assets/23aabb9d-d26f-4b31-ac15-563ca7b49787" />
 
 ### 2.4 Capas de una imagen
 
@@ -212,7 +216,7 @@ Cada instrucción del Dockerfile genera una capa. Podemos inspeccionar el histor
 docker image history hello:v0.1
 ```
 
-> **Captura:** tabla con las capas, sus tamaños y los comandos que las generaron
+<img width="1437" height="346" alt="image" src="https://github.com/user-attachments/assets/690f5d37-0b17-4886-b844-67f65208612e" />
 
 Añadimos una segunda versión de la imagen modificando `index.js`:
 
@@ -228,7 +232,7 @@ Construimos la nueva versión:
 docker image build -t hello:v0.2 .
 ```
 
-> **Captura:** salida del build de `v0.2` mostrando que las capas sin cambios se reutilizan desde caché (`Using cache`)
+<img width="1266" height="712" alt="image" src="https://github.com/user-attachments/assets/546ca70b-95ee-45af-9e65-fbbc5d441720" />
 
 Ejecutamos la nueva versión:
 
@@ -236,7 +240,7 @@ Ejecutamos la nueva versión:
 docker container run hello:v0.2
 ```
 
-> **Captura:** salida mostrando `hello from <id>` y `this is v0.2`
+<img width="687" height="235" alt="image" src="https://github.com/user-attachments/assets/1f2a7782-3756-499b-bfbc-43bbcc7f39d3" />
 
 Comprobamos que ambas versiones coexisten:
 
@@ -244,4 +248,4 @@ Comprobamos que ambas versiones coexisten:
 docker image ls
 ```
 
-> **Captura:** listado con `hello:v0.1` y `hello:v0.2` y sus IMAGE IDs
+<img width="1264" height="573" alt="image" src="https://github.com/user-attachments/assets/4d1401a6-bd11-4ff5-9270-69a6685eeb0a" />
