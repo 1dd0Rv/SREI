@@ -161,7 +161,7 @@ cat /etc/resolv.conf
 dig contenedor1
 ```
 
-> **Captura:** salida de `dig my-apache-app` mostrando la IP del contenedor Apache resuelta por DNS interno (`127.0.0.11`)
+<img width="864" height="553" alt="image" src="https://github.com/user-attachments/assets/517ccb0f-4257-4df7-844a-021699515370" />
 
 Conectar un contenedor en caliente a una red y opciones adicionales:
 
