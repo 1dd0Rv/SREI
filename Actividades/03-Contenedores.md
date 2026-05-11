@@ -23,7 +23,7 @@ docker volume rm miweb
 docker volume prune
 ```
 
-> **Captura:** salida de `docker volume ls` y `docker volume inspect miweb` mostrando la ruta del volumen en el host
+<img width="898" height="699" alt="image" src="https://github.com/user-attachments/assets/8ccb3775-5ae8-4bf7-89b3-de269ab83ad3" />
 
 ### 1.2 Asociar un volumen Docker a un contenedor
 
@@ -39,7 +39,7 @@ docker exec my-apache-app bash -c 'echo "<h1>Hola</h1>" > /usr/local/apache2/htd
 curl http://localhost:8080
 ```
 
-> **Captura:** salida de `curl http://localhost:8080` mostrando `<h1>Hola</h1>`
+<img width="1303" height="618" alt="image" src="https://github.com/user-attachments/assets/beffdd0e-4108-4f96-9197-d60ae878f023" />
 
 Destruimos el contenedor y comprobamos que los datos persisten al crear uno nuevo con el mismo volumen:
 
@@ -51,7 +51,7 @@ docker run -d --name my-apache-app -v miweb:/usr/local/apache2/htdocs -p 8080:80
 curl http://localhost:8080
 ```
 
-> **Captura:** salida de `curl` tras recrear el contenedor, mostrando que `index.html` sigue existiendo
+<img width="1278" height="331" alt="image" src="https://github.com/user-attachments/assets/e4e0b428-416d-4e9b-abe3-9ce417a4024e" />
 
 ### 1.3 Bind mount
 
@@ -66,7 +66,7 @@ docker run -d --name my-apache-app -v /home/usuario/web:/usr/local/apache2/htdoc
 curl http://localhost:8080
 ```
 
-> **Captura:** salida de `curl` mostrando el contenido del fichero del host
+<img width="1156" height="316" alt="image" src="https://github.com/user-attachments/assets/0c404af1-2c27-4bdc-87a6-98e01ba5c5e7" />
 
 Modificamos el fichero desde el host sin tocar el contenedor y verificamos el cambio en directo:
 
@@ -76,7 +76,7 @@ echo "<h1>Adios</h1>" > web/index.html
 curl http://localhost:8080
 ```
 
-> **Captura:** salida de `curl` mostrando `<h1>Adios</h1>` tras editar el fichero en el host
+<img width="1206" height="469" alt="image" src="https://github.com/user-attachments/assets/908f6d6d-966a-4788-9708-1a330555f0e7" />
 
 ---
 
