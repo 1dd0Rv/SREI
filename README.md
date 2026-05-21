@@ -23,3 +23,7 @@ En esta carpeta se enceuntran las actividades resueltas sobre el servidor web [A
 ## Proyecto AWS
 
 - ✅ [Wordpress en AWS](https://github.com/1dd0Rv/SREI/tree/wdpss_aws)
+
+## Actividades Docker
+
+- ✅[Prácticas de docker](https://github.com/1dd0Rv/SREI/tree/Docker/Actividades)
