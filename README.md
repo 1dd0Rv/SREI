@@ -114,10 +114,14 @@ Despliegue de **WordPress en producción** sobre Amazon Web Services con arquite
 
 ## `Docker` — Actividades Docker (3º Trimestre)
 
-Prácticas introductorias sobre **Docker**: conceptos fundamentales, ciclo de vida de contenedores e imágenes, redes y volúmenes.
+Prácticas sobre **Docker** basadas en el curso [josedom24/curso_docker_ies](https://github.com/josedom24/curso_docker_ies): contenedores, imágenes, redes, volúmenes, Compose y creación de imágenes.
 
-| Fichero | Contenido |
-|---------|-----------|
-| [01 — Instalación](https://github.com/1dd0Rv/SREI/blob/Docker/Actividades/01-Instalacion.md) | Instalación de Docker Engine en Debian y primeros comandos |
-| [02 — Primeros pasos](https://github.com/1dd0Rv/SREI/blob/Docker/Actividades/02-PrimeroPasos.md) | Gestión de imágenes, ejecución de contenedores y comandos básicos |
-| [03 — Contenedores](https://github.com/1dd0Rv/SREI/blob/Docker/Actividades/03-Contenedores.md) | Ciclo de vida de contenedores, redes, volúmenes y Docker Hub |
+| Fichero | Práctica | Contenido |
+|---------|----------|-----------|
+| [00 — Introducción](https://github.com/1dd0Rv/SREI/blob/Docker/Actividades/00-Introduccion.md) | Activity #0 | Primeros pasos con Play with Docker: hello-world, imágenes, capas, Dockerfile |
+| [01 — Instalación](https://github.com/1dd0Rv/SREI/blob/Docker/Actividades/01-Instalacion.md) | Práctica 1 | Instalación de Docker Engine en Ubuntu |
+| [02 — Intro Contenedores](https://github.com/1dd0Rv/SREI/blob/Docker/Actividades/02-Introduccion-Contenedores.md) | Práctica 2 | Ciclo de vida: run, exec, start, stop, logs, rm |
+| [03 — Imágenes y Contenedores](https://github.com/1dd0Rv/SREI/blob/Docker/Actividades/03-Imagenes-Contenedores.md) | Práctica 3 | 13 tareas: pull, run con nombre, parar y borrar contenedores |
+| [04 — Almacenamiento y Redes](https://github.com/1dd0Rv/SREI/blob/Docker/Actividades/04-Almacenamiento-Redes.md) | Práctica 4 | Volúmenes, bind mounts, redes bridge/host, despliegues multi-contenedor |
+| [05 — Docker Compose](https://github.com/1dd0Rv/SREI/blob/Docker/Actividades/05-Docker-Compose.md) | Práctica 5 | Orquestación con Compose: Guestbook, Temperaturas, WordPress |
+| [06 — Creación de Imágenes](https://github.com/1dd0Rv/SREI/blob/Docker/Actividades/06-Creacion-Imagenes.md) | Práctica 6 | Dockerfile, imágenes personalizadas y publicación en Docker Hub |
