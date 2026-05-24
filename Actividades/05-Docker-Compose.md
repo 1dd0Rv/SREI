@@ -145,4 +145,4 @@ docker compose down -v   # elimina también los volúmenes
 ```
 
 <img width="1896" height="336" alt="image" src="https://github.com/user-attachments/assets/72ca8fbc-6f57-48e6-83e2-77c0bc0716d3" />
- comando
+ 
