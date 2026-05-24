@@ -138,10 +138,11 @@ docker compose ps
 
 <img width="1764" height="234" alt="image" src="https://github.com/user-attachments/assets/cb60514c-2bc5-4353-991b-1cbef6969f67" />
 
-> **Captura:** navegador accediendo a `http://localhost` mostrando el instalador de WordPress
+<img width="1486" height="961" alt="image" src="https://github.com/user-attachments/assets/79cc3de4-a7bf-4c71-a91f-2ac9980154de" />
 
 ```bash
 docker compose down -v   # elimina también los volúmenes
 ```
 
-> **Captura:** salida del comando
+<img width="1896" height="336" alt="image" src="https://github.com/user-attachments/assets/72ca8fbc-6f57-48e6-83e2-77c0bc0716d3" />
+ comando
