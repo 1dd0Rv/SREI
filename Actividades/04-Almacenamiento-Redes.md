@@ -61,7 +61,7 @@ Creamos un directorio en el host y lo montamos en el contenedor:
 mkdir web
 echo "<h1>Hola</h1>" > web/index.html
 
-docker run -d --name my-apache-app -v /home/usuario/web:/usr/local/apache2/htdocs -p 8080:80 httpd:2.4
+docker run -d --name my-apache-app -v /home/roddy/web:/usr/local/apache2/htdocs -p 8080:80 httpd:2.4
 
 curl http://localhost:8080
 ```
@@ -329,7 +329,7 @@ docker network create red_tomcat
 
 docker run -d --name aplicacionjava \
     --network red_tomcat \
-    -v /home/usuario/tomcat/sample.war:/usr/local/tomcat/webapps/sample.war:ro \
+    -v /home/roddy/tomcat/sample.war:/usr/local/tomcat/webapps/sample.war:ro \
     tomcat:9.0
 ```
 
@@ -356,7 +356,7 @@ Desplegamos Nginx:
 docker run -d --name proxy \
     -p 80:80 \
     --network red_tomcat \
-    -v /home/usuario/tomcat/default.conf:/etc/nginx/conf.d/default.conf:ro \
+    -v /home/roddy/tomcat/default.conf:/etc/nginx/conf.d/default.conf:ro \
     nginx
 ```
 
