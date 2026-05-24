@@ -14,7 +14,7 @@ Verificamos la instalación:
 docker compose version
 ```
 
-> **Captura:**
+<img width="472" height="141" alt="image" src="https://github.com/user-attachments/assets/a9a7d16d-ca7f-4d31-8aed-05742e6d8cfc" />
 
 ---
 
@@ -47,15 +47,15 @@ docker compose up -d
 docker compose ps
 ```
 
-> **Captura:** salida de `docker compose ps` con los dos servicios en estado `running`
+<img width="1867" height="441" alt="image" src="https://github.com/user-attachments/assets/6c6d044e-7248-41a5-b782-c8d2a49df6da" />
 
-> **Captura:** navegador accediendo a `http://localhost` con la aplicación Guestbook
+<img width="1647" height="738" alt="image" src="https://github.com/user-attachments/assets/5a493a6c-d8fe-4c4e-9337-42f9fe77dbc5" />
 
 ```bash
 docker compose down
 ```
 
-> **Captura:** salida de `docker compose down`
+<img width="1875" height="306" alt="image" src="https://github.com/user-attachments/assets/8adb24c4-f15d-410e-b403-9b79aa1b6e5e" />
 
 ---
 
@@ -85,9 +85,9 @@ docker compose up -d
 docker compose ps
 ```
 
-> **Captura:** `docker compose ps` con frontend y backend activos
+<img width="1914" height="478" alt="image" src="https://github.com/user-attachments/assets/e6bcdeb1-42eb-41de-8708-37242dd14aeb" />
 
-> **Captura:** navegador mostrando la aplicación Temperaturas con una búsqueda realizada
+<img width="1765" height="820" alt="image" src="https://github.com/user-attachments/assets/e8a9e55b-e815-4a6b-b213-0e5be61fcf50" />
 
 ```bash
 docker compose down
@@ -136,7 +136,7 @@ docker compose up -d
 docker compose ps
 ```
 
-> **Captura:** `docker compose ps` con `servidor_wp` y `servidor_mysql` activos
+<img width="1764" height="234" alt="image" src="https://github.com/user-attachments/assets/cb60514c-2bc5-4353-991b-1cbef6969f67" />
 
 > **Captura:** navegador accediendo a `http://localhost` mostrando el instalador de WordPress
 
