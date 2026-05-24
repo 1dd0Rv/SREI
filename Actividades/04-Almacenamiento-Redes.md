@@ -170,7 +170,7 @@ docker network connect red1 <contenedor>
 docker network disconnect red1 <contenedor>
 ```
 
-> **Captura:** resultado de `docker network inspect red1` tras conectar un contenedor en caliente, mostrando el nuevo contenedor en la sección `Containers`
+<img width="1195" height="646" alt="image" src="https://github.com/user-attachments/assets/ab28a074-1ace-4c70-add0-34647414937a" />
 
 ---
 
@@ -192,9 +192,9 @@ docker run -d -p 80:5000 \
     iesgn/guestbook
 ```
 
-> **Captura:** salida de `docker ps` mostrando los dos contenedores `redis` y `guestbook` en estado `Up`
+<img width="1890" height="324" alt="image" src="https://github.com/user-attachments/assets/bf0fb1d5-ca3e-4849-8c00-45e669c4e412" />
 
-> **Captura:** navegador accediendo a `http://localhost` con la aplicación Guestbook funcionando
+<img width="1117" height="856" alt="image" src="https://github.com/user-attachments/assets/0f7bcab7-c0e3-421e-a47c-5aa61b98346d" />
 
 Verificamos la persistencia: eliminamos y recreamos el contenedor Redis:
 
@@ -207,7 +207,7 @@ docker run -d --name redis \
     redis redis-server --appendonly yes
 ```
 
-> **Captura:** aplicación Guestbook en el navegador mostrando los datos anteriores tras recrear Redis
+<img width="1170" height="868" alt="image" src="https://github.com/user-attachments/assets/ceb08874-9615-432b-8d93-3b83b54c0211" />
 
 ### 3.1 Configuración con variable de entorno
 
@@ -226,7 +226,7 @@ docker run -d -p 80:5000 \
     iesgn/guestbook
 ```
 
-> **Captura:** salida de `docker ps` confirmando que ambos contenedores están activos con el nombre personalizado
+<img width="1851" height="273" alt="image" src="https://github.com/user-attachments/assets/5499e4dd-fc5e-4981-b535-1fb6f4380854" />
 
 ---
 
@@ -247,9 +247,10 @@ docker run -d -p 80:3000 \
     iesgn/temperaturas_frontend
 ```
 
-> **Captura:** salida de `docker ps` con los dos contenedores activos
+<img width="1887" height="316" alt="image" src="https://github.com/user-attachments/assets/c5965c7a-0811-440f-913e-342574dea220" />
 
-> **Captura:** navegador mostrando la aplicación Temperaturas con una búsqueda de municipio realizada
+<img width="1471" height="915" alt="image" src="https://github.com/user-attachments/assets/58747d3d-ae61-442c-90f3-8df3a0842b0f" />
+
 
 ### 4.1 Configuración con variable de entorno
 
@@ -267,7 +268,7 @@ docker run -d -p 80:3000 \
     iesgn/temperaturas_frontend
 ```
 
-> **Captura:** salida de `docker ps` mostrando el backend con nombre `temperaturas-api` y el frontend funcionando
+<img width="1851" height="448" alt="image" src="https://github.com/user-attachments/assets/72f0b146-81e8-4238-8309-647b4a2fa286" />
 
 ---
 
@@ -300,9 +301,9 @@ docker run -d --name servidor_wp \
 docker ps
 ```
 
-> **Captura:** salida de `docker ps` mostrando `servidor_mysql` (puerto 3306 sin mapear) y `servidor_wp` (0.0.0.0:80->80)
+<img width="1795" height="153" alt="image" src="https://github.com/user-attachments/assets/156d64af-8dc5-4828-96a3-9a70d7a8f773" />
 
-> **Captura:** navegador accediendo a `http://localhost` mostrando el asistente de instalación de WordPress (o el sitio ya instalado)
+<img width="1473" height="942" alt="image" src="https://github.com/user-attachments/assets/406b876b-5b9a-408f-8fd0-854feddeab05" />
 
 ---
 
@@ -319,7 +320,7 @@ mkdir tomcat && cd tomcat
 ls
 ```
 
-> **Captura:** salida de `ls` mostrando `sample.war` y `default.conf` en el directorio
+<img width="636" height="217" alt="image" src="https://github.com/user-attachments/assets/d255872a-bda7-4022-b111-5a571ecc1292" />
 
 Creamos la red y desplegamos Tomcat:
 
@@ -332,7 +333,7 @@ docker run -d --name aplicacionjava \
     tomcat:9.0
 ```
 
-> **Captura:** salida de `docker ps` mostrando el contenedor `aplicacionjava` activo (sin puerto mapeado al exterior)
+<img width="1390" height="193" alt="image" src="https://github.com/user-attachments/assets/c05e7acd-74d9-45db-ae74-bc6d790b4e57" />
 
 Fichero `default.conf` de Nginx para el proxy inverso:
 
@@ -359,6 +360,6 @@ docker run -d --name proxy \
     nginx
 ```
 
-> **Captura:** salida de `docker ps` mostrando `proxy` (0.0.0.0:80->80) y `aplicacionjava` en la misma red
+<img width="1839" height="208" alt="image" src="https://github.com/user-attachments/assets/99e44392-77b2-44a9-8212-d947e6430476" />
 
-> **Captura:** navegador accediendo a `http://localhost` mostrando la aplicación Java de ejemplo servida a través del proxy Nginx
+<img width="1839" height="523" alt="image" src="https://github.com/user-attachments/assets/dceb3ef2-dac2-4efc-b809-126ab936beb1" />
