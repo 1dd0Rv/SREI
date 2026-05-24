@@ -10,7 +10,8 @@ Actividad basada en el módulo 3 del curso [josedom24/curso_docker_ies](https://
 docker run ubuntu /bin/echo 'Hello world'
 ```
 
-> **Captura:** salida del comando mostrando "Hello world"
+<img width="438" height="105" alt="image" src="https://github.com/user-attachments/assets/20e01cea-a900-4924-9b9e-b12d5e444891" />
+
 
 Cuando ejecutamos `docker run`, Docker busca la imagen localmente. Si no existe la descarga del registro. Cada `docker run` crea un contenedor nuevo.
 
@@ -22,15 +23,8 @@ Cuando ejecutamos `docker run`, Docker busca la imagen localmente. Si no existe 
 docker run -it --name contenedor1 ubuntu bash
 ```
 
-Dentro del contenedor:
+<img width="692" height="310" alt="image" src="https://github.com/user-attachments/assets/5f6ad628-0da6-4402-9ba4-8190bf5c7222" />
 
-```bash
-root@<id>:/# ls
-root@<id>:/# cat /etc/os-release
-root@<id>:/# exit
-```
-
-> **Captura:** terminal dentro del contenedor mostrando el prompt `root@<id>:/#` y la salida de `cat /etc/os-release`
 
 ---
 
@@ -43,7 +37,8 @@ docker ps         # contenedores en ejecución
 docker ps -a      # todos, incluidos los detenidos
 ```
 
-> **Captura:** salida de `docker ps -a` mostrando `contenedor1` en estado `Exited`
+<img width="1169" height="178" alt="image" src="https://github.com/user-attachments/assets/5edad0f7-f101-479f-8fac-c7e1292a30c7" />
+
 
 ### 3.2 Iniciar y parar
 
@@ -52,7 +47,8 @@ docker start contenedor1
 docker stop contenedor1
 ```
 
-> **Captura:** salida de `docker start contenedor1` y `docker ps`
+<img width="758" height="155" alt="image" src="https://github.com/user-attachments/assets/0e43e07d-f4e3-4be3-8aed-03d08a43fd94" />
+`
 
 ### 3.3 Conectarse a un contenedor en ejecución
 
@@ -61,7 +57,8 @@ docker start contenedor1
 docker attach contenedor1
 ```
 
-> **Captura:** terminal reconectada al contenedor en ejecución
+<img width="853" height="355" alt="image" src="https://github.com/user-attachments/assets/2447d4cb-114c-4caa-8269-0403af929212" />
+
 
 ### 3.4 Ejecutar un proceso en un contenedor activo
 
@@ -70,7 +67,8 @@ docker start contenedor1
 docker exec contenedor1 ls /etc
 ```
 
-> **Captura:** listado de `/etc` devuelto por `exec` sin entrar en modo interactivo
+<img width="379" height="299" alt="image" src="https://github.com/user-attachments/assets/0d1766f1-d976-414b-97d9-ff719860780c" />
+
 
 ---
 
@@ -80,7 +78,8 @@ docker exec contenedor1 ls /etc
 docker run -d --name contenedor2 ubuntu bash -c "while true; do echo hello world; sleep 1; done"
 ```
 
-> **Captura:** `docker ps` mostrando `contenedor2` en estado `Up`
+<img width="908" height="203" alt="image" src="https://github.com/user-attachments/assets/a40cde88-0383-438a-9e38-5d8d3d5738e8" />
+
 
 Ver los logs del contenedor:
 
@@ -88,8 +87,8 @@ Ver los logs del contenedor:
 docker logs contenedor2
 docker logs -f contenedor2   # en tiempo real
 ```
+<img width="436" height="751" alt="image" src="https://github.com/user-attachments/assets/74965900-3c02-40f2-997c-fdc4586d98a0" />
 
-> **Captura:** salida de `docker logs contenedor2` con las líneas "hello world"
 
 ---
 
@@ -102,7 +101,8 @@ docker rm contenedor2
 docker ps -a
 ```
 
-> **Captura:** `docker ps -a` vacío tras eliminar ambos contenedores
+<img width="1121" height="214" alt="image" src="https://github.com/user-attachments/assets/707d0876-fc34-40e5-9fe1-12a016204f16" />
+
 
 Eliminar todos los contenedores parados de una vez:
 
@@ -119,4 +119,5 @@ docker run -d --name webserver nginx -p 8080:80
 docker inspect webserver
 ```
 
-> **Captura:** fragmento de la salida de `docker inspect` mostrando la IP y el estado del contenedor
+<img width="1544" height="740" alt="image" src="https://github.com/user-attachments/assets/9dd93b50-7eb2-4e0f-b72b-154d28b582a5" />
+
